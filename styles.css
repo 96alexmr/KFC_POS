@@ -1,0 +1,95 @@
+body {
+    background-color: #1c1c1c;
+    color: #dcdcdc;
+    font-family: 'Old Standard TT', serif;
+  }
+  
+  header {
+    background-color: #2d2d2d;
+    color: #a0522d;
+    position: relative;
+  }
+  
+  header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+  
+  h2, h3 {
+    font-weight: 700;
+    color: #a0522d;
+  }
+  
+  .category-item, .product-item {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #a0522d;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 128px;
+    height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2d2d;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .category-item img, .product-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .category-item p, .product-item p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .receipt-section {
+    padding-right: 20px;
+  }
+  
+  .divider {
+    border-left: 2px solid #a0522d;
+    height: 100%;
+    position: absolute;
+    left: -2px;
+    top: 0;
+  }
+  
+  .receipt-divider {
+    border-top: 2px solid #a0522d;
+    margin: 10px 0;
+  }
+  
+  .item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap: 10px;
+  }
+  
+  #products {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #product-items {
+    margin-top: 10px;
+  }
+  
+  .btn-secondary {
+    background-color: #a0522d;
+    border-color: #a0522d;
+    color: #dcdcdc;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #8b4513;
+    border-color: #8b4513;
+  }
