@@ -122,5 +122,24 @@ const categories = [
     document.getElementById("categories").style.display = "grid";
     currentCategory = null;
   });
-  
+  const newReceiptBtn = document.getElementById("new-receipt-btn");
+newReceiptBtn.addEventListener("click", startNewReceipt);
+
+function startNewReceipt() {
+  // Clear the receipt
+  const receiptDiv = document.getElementById("receipt");
+  receiptDiv.innerHTML = "";
+
+  // Reset the total and employee profit
+  total = 0;
+  employeeProfit = 0;
+  document.getElementById("total").textContent = "0.00";
+  document.getElementById("employee-profit").textContent = "0.00";
+
+  // Hide the products section and show the categories section
+  const productsDiv = document.getElementById("products");
+  productsDiv.style.display = "none";
+  document.getElementById("categories").style.display = "grid";
+  currentCategory = null;
+}
   renderCategories();

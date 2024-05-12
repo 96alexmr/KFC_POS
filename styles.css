@@ -93,3 +93,12 @@ body {
     background-color: #8b4513;
     border-color: #8b4513;
   }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .new-receipt-btn {
+    margin-right: 20px;
+  }
