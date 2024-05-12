@@ -142,4 +142,19 @@ function startNewReceipt() {
   document.getElementById("categories").style.display = "grid";
   currentCategory = null;
 }
+const copyReceiptBtn = document.getElementById("copy-receipt-btn");
+copyReceiptBtn.addEventListener("click", copyReceipt);
+
+function copyReceipt() {
+  const receiptItems = document.getElementById("receipt").innerText;
+  const formattedReceipt = `Kamassa Firearm Company\n\n${receiptItems}\n\nTotal: $${total.toFixed(2)}`;
+
+  navigator.clipboard.writeText(formattedReceipt)
+    .then(() => {
+      alert("Receipt copied to clipboard!");
+    })
+    .catch((error) => {
+      console.error("Failed to copy receipt:", error);
+    });
+}
   renderCategories();
