@@ -97,3 +97,10 @@ body {
     background-color: #8b4513;
     border-color: #8b4513;
   }
+  img {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

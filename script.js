@@ -157,4 +157,15 @@ function copyReceipt() {
       console.error("Failed to copy receipt:", error);
     });
 }
+document.addEventListener('DOMContentLoaded', function() {
+  var images = document.getElementsByTagName('img');
+  for (var i = 0; i < images.length; i++) {
+    images[i].setAttribute('draggable', 'false');
+  }
+});
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});
   renderCategories();
